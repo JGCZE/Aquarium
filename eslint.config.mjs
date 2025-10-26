@@ -18,6 +18,7 @@ const eslintConfig = [
     files: tsFiles,
     name: "my-rules",
     rules: {
+      "import/prefer-default-export": 'off',
       '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/no-magic-numbers': 'off',
     },

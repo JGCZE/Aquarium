@@ -1,13 +1,15 @@
 'use client';
 import type { ReactElement } from 'react';
-import TopPannel from './components/TopPannel';
-import WaterBackGround from './components/WaterBackGround';
+import { Aquarium, TopPannel } from './components';
+import { AquariumGlobalProvider } from './context/globalContext';
 
 const App = (): ReactElement => (
   <div className="min-h-screen">
-    <TopPannel />
+    <AquariumGlobalProvider>
+      <TopPannel />
 
-    <WaterBackGround />
+      <Aquarium />
+    </AquariumGlobalProvider>
   </div>
 );
 
