@@ -20,8 +20,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^9.38.0",
     "eslint-config-next": "15.5.2",
+    "eslint-config-regiojet-typescript-react": "^1.0.1",
+    "eslint-import-resolver-typescript": "^4.4.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,21 +1,25 @@
-"use client"
-import { useState, useEffect } from "react";
+'use client';
+import { useEffect, useState } from 'react';
 
 const useResponsiveWidth = () => {
-  const [ width, setWidth ] = useState<number>(0);
-  const [ isInitialized, setIsInitialized ] = useState<boolean>(false);
+  const [width, setWidth] = useState<number>(0);
+  const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
     setIsInitialized(true);
 
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
+    const handleResize = (): void => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
-  return { width, isInitialized };
+  return { isInitialized, width };
 };
 
 export default useResponsiveWidth;

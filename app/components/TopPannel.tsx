@@ -1,9 +1,5 @@
-import React from 'react'
+import type { ReactElement } from 'react';
 
-const TopPannel = () => {
-  return (
-    <div className='h-20'>TopPannel</div>
-  )
-}
+const TopPannel = (): ReactElement => <div className="h-20">TopPannel</div>;
 
-export default TopPannel
+export default TopPannel;

@@ -1,28 +1,28 @@
-"use client"
-import Image from 'next/image'
-import React from 'react'
-import useFish, { EFishSpeed } from './hook/useFish'
-import clsx from 'clsx'
+'use client';
+import clsx from 'clsx';
+import Image from 'next/image';
+import type { ReactElement } from 'react';
+import useFish, { type TFishSpeed } from './hook/useFish';
 
 interface IFishProps {
-  fishWidth: number
-  fishSpeed: EFishSpeed
+  readonly fishSpeed: TFishSpeed;
+  readonly fishWidth: number;
 }
 
-const Fish = ({ fishWidth, fishSpeed }: IFishProps) => {
-  const { coordLeft, coordTop, isFlipped } = useFish(fishWidth, fishSpeed)
+const Fish = ({ fishSpeed, fishWidth }: IFishProps): ReactElement => {
+  const { coordLeft, coordTop, isFlipped } = useFish(fishWidth, fishSpeed);
 
   return (
-     <div 
-      className={clsx("absolute", isFlipped && `rotate-y-180`)}
+    <div
+      className={clsx('absolute', isFlipped && 'rotate-y-180')}
       style={{
         left: `${coordLeft}px`,
-        top: `${coordTop}px`
+        top: `${coordTop}px`,
       }}
     >
-      <Image priority src="/fish-01.svg" width={fishWidth} height={fishWidth} alt='fish-01'/>
+      <Image alt="fish-01" height={fishWidth} src="/fish-01.svg" width={fishWidth} priority />
     </div>
-  )
-}
+  );
+};
 
-export default Fish
+export default Fish;
