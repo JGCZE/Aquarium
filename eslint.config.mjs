@@ -18,7 +18,8 @@ const eslintConfig = [
     files: tsFiles,
     name: "my-rules",
     rules: {
-      // Add custom rules here
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      '@typescript-eslint/no-magic-numbers': 'off',
     },
     settings: {
       "import/resolver": {

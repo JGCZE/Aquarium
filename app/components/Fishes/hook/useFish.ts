@@ -23,7 +23,8 @@ const useFish = (fishWidth: number, speed: TFishSpeed): IReturn => {
 
   const randomTurnTime = useMemo(
     () => RANDOM_TURN_BASE + Math.random() * RANDOM_TURN_VARIANCE,
-    [isFlipped]);
+    [isFlipped],
+  );
 
   useEffect(() => {
     const intervalId = setInterval(() => {

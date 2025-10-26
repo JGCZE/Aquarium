@@ -1,6 +1,5 @@
 ## Eslint ignore rules:
-
-
+no magic numbers: node_modules/eslint-config-regiojet-typescript/rules/defaultTs.mjs#L360
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

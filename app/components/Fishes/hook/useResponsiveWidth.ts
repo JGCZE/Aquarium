@@ -1,7 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const useResponsiveWidth = () => {
+interface IReturn {
+  isInitialized: boolean;
+  width: number;
+}
+
+const useResponsiveWidth = (): IReturn => {
   const [width, setWidth] = useState<number>(0);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
